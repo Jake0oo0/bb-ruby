@@ -30,6 +30,12 @@ module BBRuby
       'Strikeout',
       '[s]nevermind[/s]',
       :strikeout],
+    'Header' => [
+      /\[h([1-6])\](.*?)\[\/h\1\]/mi,
+      '<h\1>\2</h\1>',
+      'Header',
+      '[h1]Welcome![/h1]',
+      :header],
     'Delete' => [
       /\[del(:.+)?\](.*?)\[\/del\1?\]/mi,
       '<del>\2</del>',
